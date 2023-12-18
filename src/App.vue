@@ -1,11 +1,8 @@
 <template>
-  <!-- <LoginView /> -->
-  <TableView/>
+  <router-view></router-view>
 </template>
 
 <script setup>
-// import LoginView from "./views/LoginView.vue";
-import TableView from './views/TableView.vue';
 </script>
 
 <style>

@@ -5,12 +5,12 @@
         <form method="post" action="서버의url" id="login-form">
             <input type="text" name="userName" placeholder="Email">
             <input type="password" name="userPassword" placeholder="Password">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" @click="login()">
             <span>로그인 이력이 있으신가요? </span>
             <a href="">아니요</a>
         </form>
     </div>
-</body>
+  </body>
 </template>
 
 <style>
@@ -34,6 +34,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 1px solid #d6d6d6;
+  border-radius: 20px;
 }
 
 .login-wrapper > h2 {
@@ -49,7 +51,8 @@ body {
   margin-bottom: 16px;
   border-radius: 6px;
   background-color: #f8f8f8;
-  border: 1px solid;
+
+  /* border: 1px solid; */
 }
 #login-form > input::placeholder {
   color: #d2d2d2;
@@ -61,3 +64,15 @@ body {
   margin-top: 20px;
 }
 </style>
+
+<script setup>
+  import {useRouter} from 'vue-router';
+
+  const router = useRouter()
+
+  const login = ()=>{
+    router.push({
+      path : "/table",
+    });
+  };
+</script> 
